@@ -1,7 +1,30 @@
 "call pathogen#infect()
+set nocompatible  " We don't want vi compatibility.
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+  Bundle 'gmarik/vundle'
+  Bundle 'molokai'
+  Bundle 'L9'
+  Bundle 'FuzzyFinder'
+  Bundle 'scrooloose/nerdtree'
+  Bundle 'tpope/vim-rails.git'
+  Bundle 'tpope/vim-haml.git'
+  Bundle 'tpope/vim-markdown.git'
+  Bundle 'tpope/vim-endwise.git'
+  " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 filetype plugin indent on
-set nocompatible  " We don't want vi compatibility.
+
 set mouse=a
 "set spell
 "gvim
