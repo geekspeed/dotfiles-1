@@ -11,6 +11,8 @@ set rtp+=~/.vim/bundle/vundle/
   Bundle 'gmarik/vundle'
   Bundle 'L9'
   Bundle 'FuzzyFinder'
+  Bundle 'SuperTab'
+  Bundle 'vim-ruby/vim-ruby'
   Bundle 'scrooloose/nerdtree'
   Bundle 'tpope/vim-rails.git'
   Bundle 'tpope/vim-haml.git'
@@ -27,7 +29,7 @@ filetype plugin indent on
 set mouse=a
 "set spell
 "gvim
-if has("gui_mac") || has("gui_macvim")
+if has("gui_mac") || has("gui_macvim") || has('gui_running')
 " Command-T for CommandT
   "macmenu &File.New\ Tab key=<D-T>
   map <D-t> :tabnew<cr>
