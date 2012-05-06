@@ -9,7 +9,6 @@ set rtp+=~/.vim/bundle/vundle/
 " let Vundle manage Vundle
 " required!
   Bundle 'gmarik/vundle'
-  Bundle 'molokai'
   Bundle 'L9'
   Bundle 'FuzzyFinder'
   Bundle 'scrooloose/nerdtree'
@@ -53,11 +52,12 @@ set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 
 "display
-color molokai
 set cursorline
+colorscheme molokai
+let g:molokai_original = 0
 set incsearch
 set number
-set ruler
+"set ruler
 set showcmd
 set showmode
 autocmd BufNewFile,BufRead * set list listchars=tab:▸\
