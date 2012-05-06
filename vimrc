@@ -1,43 +1,37 @@
-"call pathogen#infect()
 set nocompatible  " We don't want vi compatibility.
-
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+call vundle#rc()
 
 " let Vundle manage Vundle
-" required!
-  Bundle 'gmarik/vundle'
-  Bundle 'L9'
-  Bundle 'FuzzyFinder'
-  Bundle 'SuperTab'
-  Bundle 'vim-ruby/vim-ruby'
-  Bundle 'scrooloose/nerdtree'
-  Bundle 'tpope/vim-rails.git'
-  Bundle 'tpope/vim-haml.git'
-  Bundle 'tpope/vim-markdown.git'
-  Bundle 'tpope/vim-endwise.git'
-  " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+Bundle 'gmarik/vundle'
+Bundle 'ack.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'SuperTab'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'tpope/vim-markdown.git'
+Bundle 'tpope/vim-endwise.git'
+Bundle 'wincent/Command-T'
+
+command! BI BundleInstall
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 filetype plugin indent on
 
 set mouse=a
-"set spell
-"gvim
-if has("gui_mac") || has("gui_macvim") || has('gui_running')
-" Command-T for CommandT
-  "macmenu &File.New\ Tab key=<D-T>
-  map <D-t> :tabnew<cr>
-  map <D-R> :CommandT<CR>
-  map <D-R> <Esc>:CommandT<CR>
-  set guifont=Monaco:h14
-  set guioptions-=T
-endif
+
+"spell checker
+set spell
+set spelllang=en_us
 
 "editor
 syntax on
@@ -59,7 +53,6 @@ colorscheme molokai
 let g:molokai_original = 0
 set incsearch
 set number
-"set ruler
 set showcmd
 set showmode
 autocmd BufNewFile,BufRead * set list listchars=tab:▸\
@@ -70,15 +63,25 @@ set showmatch
 autocmd BufLeave,FocusLost silent! wall "save on lost focus
 set autowrite
 set noswapfile
-set nobackup
 autocmd BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif " Remove trailing whitespace
+
+"backup
+set backupdir=~/tmp,/tmp
 
 "searching
 set ignorecase
 set smartcase
 set hlsearch
 
+"status line
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'none'}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
 "keys
+
+"change tabs
+map <C-h> :tabprev<cr>
+map <C-l> :tabnext<cr>
 
 " Bubble lines
 nnoremap <C-j> :m+<cr>==
@@ -88,7 +91,7 @@ inoremap <C-k> <Esc>:m-2<cr>==gi
 vnoremap <C-j> :m'>+<cr>gv=gv
 vnoremap <C-k> :m-2<cr>gv=gv
 
+nmap <C-f> :FufFile<cr>
+nmap <leader>a :Ack
+nmap <F7> :Ack -w <c-r><c-w><cr>
 
-nmap <C-f> :FufFile<cr>
-" ctrl+f to FuzzyFinder (recursive)
-nmap <C-f> :FufFile<cr>
