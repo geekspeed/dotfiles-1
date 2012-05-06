@@ -41,7 +41,7 @@ set iskeyword-=_ " allow underscore to delimit words"
 set nowrap
 set textwidth=0
 set wrapmargin=0
-
+set backspace=indent,eol,start
 "tabs and indents
 set autoindent
 set smartindent
