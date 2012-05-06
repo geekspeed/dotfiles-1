@@ -1,4 +1,4 @@
-irequire 'rubygems'
+require 'rubygems'
 require 'pp'
 require 'irb/completion'
 require 'irb/ext/save-history'
@@ -54,11 +54,11 @@ def h!(start, stop=nil)
     code = history_a[start..stop]
     code.each_with_index { |e,i|
         irb_context.evaluate(e,i)
-    }   
+    }
     Readline::HISTORY.pop
-    code.each { |l| 
+    code.each { |l|
         Readline::HISTORY.push l
-    }   
+    }
     puts code
 end
 

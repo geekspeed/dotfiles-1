@@ -34,7 +34,7 @@ if has("gui_mac") || has("gui_macvim") || has('gui_running')
   "macmenu &File.New\ Tab key=<D-T>
   map <D-t> :tabnew<cr>
   map <D-R> :CommandT<CR>
-  Rmap <D-R> <Esc>:CommandT<CR>
+  map <D-R> <Esc>:CommandT<CR>
   set guifont=Monaco:h14
   set guioptions-=T
 endif
