@@ -39,6 +39,8 @@ set modeline
 set encoding=utf-8
 set iskeyword-=_ " allow underscore to delimit words"
 set nowrap
+set textwidth=0
+set wrapmargin=0
 
 "tabs and indents
 set autoindent
@@ -73,9 +75,13 @@ set ignorecase
 set smartcase
 set hlsearch
 
+"command-t file searching
+set wildignore=.git,.svn,*.o,*.obj,*.rbc,*.class,*.ico,*.png,*.jpeg,*.jpg,*.gif,*.ttf,*.pdf,*.ttf,*.EOT,*.ttf,*.svg,*.woff
+let g:CommandTMaxFiles=20000
+
 "status line
 set laststatus=2
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'none'}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'none'}]\ [COL=%03v][%p%%]\ [LEN=%L]
 
 "keys
 
