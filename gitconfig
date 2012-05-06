@@ -1,0 +1,30 @@
+[alias]
+st = status
+ci = commit
+co = checkout
+br = branch
+sh = !git-sh
+sub = submodule
+
+[color]
+branch = auto
+diff = auto
+interactive = auto
+status = auto
+showbranch = auto
+sh = auto
+
+[color "branch"]
+current = green
+remote = cyan
+
+[push]
+default = current
+
+[color "status"]
+added = green
+changed = red
+untracked = cyan
+
+[merge]
+tool = opendiff
