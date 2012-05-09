@@ -6,8 +6,8 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-Bundle 'ack.vim'
 Bundle 'L9'
+Bundle 'mileszs/ack.vim'
 Bundle 'FuzzyFinder'
 Bundle 'SuperTab'
 Bundle 'vim-ruby/vim-ruby'
@@ -16,7 +16,8 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-haml.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-endwise.git'
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim.git'
 
 command! BI BundleInstall
 " Brief help
@@ -32,7 +33,7 @@ set mouse=a
 "spell checker
 set spell
 set spelllang=en_us
-
+"set mousemodel=popup
 "editor
 syntax on
 set modeline
@@ -75,15 +76,18 @@ set ignorecase
 set smartcase
 set hlsearch
 
-"command-t file searching
+"ctrlp file searching
 set wildignore=.git,.svn,*.o,*.obj,*.rbc,*.class,*.ico,*.png,*.jpeg,*.jpg,*.gif,*.ttf,*.pdf,*.ttf,*.EOT,*.ttf,*.svg,*.woff
-let g:CommandTMaxFiles=20000
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "status line
 set laststatus=2
 set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'none'}]\ [COL=%03v][%p%%]\ [LEN=%L]
 
 "keys
+
+"NERDTree
+map <C-e> :NERDTree
 
 "change tabs
 map <C-h> :tabprev<cr>
