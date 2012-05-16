@@ -1,0 +1,11 @@
+--color
+--sort-files
+--smart-case
+
+--type-set=sass=.sass
+--type-set=coffee=.coffee
+--type-set=ruby=.haml,.rake
+
+--ignore-dir=rafa/static
+--ignore-dir=compiled
+--ignore-dir=compressed
