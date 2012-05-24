@@ -31,8 +31,8 @@ filetype plugin indent on
 set mouse=a
 
 "spell checker
-set spell
-set spelllang=en_us
+"set spell
+"set spelllang=en_us
 "set mousemodel=popup
 "editor
 syntax on
