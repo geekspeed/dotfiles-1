@@ -29,6 +29,7 @@ command! BI BundleInstall
 filetype plugin indent on
 
 set mouse=a
+set clipboard=unnamed
 
 "spell checker
 "set spell
