@@ -13,7 +13,9 @@ alias gb='git branch'
 alias gc='git commit -v'
 alias gco='git checkout'
 alias gd='git diff'
+alias gdm='git diff origin/master'
 alias gp='git pull'
+alias gpr='git pull --rebase'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gs='git status -sb'
 
@@ -25,6 +27,9 @@ alias be="b exec"
 
 # ruby
 alias rake='be rake'
-alias rspec='be rspec --color'
+alias rspec='nocorrect be rspec --color'
 
+# ctags
+alias ctags='ctags -R --exclude .git --exclude reports --exclude tmp .'
 
+#zsh spellings

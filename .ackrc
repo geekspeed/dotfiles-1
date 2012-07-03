@@ -9,3 +9,5 @@
 --ignore-dir=rafa/static
 --ignore-dir=compiled
 --ignore-dir=compressed
+--ignore-dir=tmp
+--ignore-dir=reports
