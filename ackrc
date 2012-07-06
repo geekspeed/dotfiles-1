@@ -11,3 +11,4 @@
 --ignore-dir=compressed
 --ignore-dir=tmp
 --ignore-dir=reports
+--ignore-dir=coverage
