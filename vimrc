@@ -16,8 +16,10 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-haml.git'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-endwise.git'
-"Bundle 'wincent/Command-T'
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'taglist.vim'
+Bundle 'rson/vim-conque'
+Bundle 'skwp/vim-spec-finder'
 Bundle 'taglist.vim'
 
 command! BI BundleInstall
@@ -62,7 +64,8 @@ set number
 set showcmd
 set showmode
 autocmd BufNewFile,BufRead * set list listchars=tab:▸\
-set list listchars=tab:\|_,trail:. "draw tabs & trailing spaces
+"set list listchars=tab:\|_,trail:. "draw tabs & trailing spaces
+set list listchars=trail:. "draw trailing spaces
 set showmatch
 
 "files
@@ -90,12 +93,14 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'n
 "keys
 
 "TagList
-map <C-w> :TlistToggle<cr>
+map <C-a> :TlistToggle<cr>
 
 "NERDTree
 map <C-e> :NERDTreeToggle<cr>
 
-"change tabs
+"tabs
+map <S-T> :tabnew<cr>
+map <S-W> :tabclose<cr>
 map <C-h> :tabprev<cr>
 map <C-l> :tabnext<cr>
 
@@ -107,7 +112,16 @@ inoremap <C-k> <Esc>:m-2<cr>==gi
 vnoremap <C-j> :m'>+<cr>gv=gv
 vnoremap <C-k> :m-2<cr>gv=gv
 
-nmap <C-f> :FufFile<cr>
+"Searching
+nmap <C-f> :FufFileWithFullCwd<cr>
 nmap <leader>a :Ack
 nmap <F7> :Ack -w <c-r><c-w><cr>
+
+"Conque
+let g:ConqueTerm_Color = 1
+nmap <silent> <Leader>z :ConqueTermSplit zsh<CR>
+
+"rspec
+let g:ruby_conque_rspec_command='rspec'
+nmap <silent> <Leader>s :call RelatedSpecVOpen()<CR>
 
