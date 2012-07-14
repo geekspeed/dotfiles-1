@@ -29,10 +29,8 @@ command! BI BundleInstall
 " :BundleSearch(!) foo - search(or refresh cache first) for foo
 " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
-filetype plugin indent on
-
 set mouse=a
-set clipboard=unnamed
+"set clipboard=unnamed
 
 "spell checker
 "set spell
@@ -98,12 +96,6 @@ map <C-a> :TlistToggle<cr>
 "NERDTree
 map <C-e> :NERDTreeToggle<cr>
 
-"tabs
-map <S-T> :tabnew<cr>
-map <S-W> :tabclose<cr>
-map <C-h> :tabprev<cr>
-map <C-l> :tabnext<cr>
-
 " Bubble lines
 nnoremap <C-j> :m+<cr>==
 nnoremap <C-k> :m-2<cr>==
@@ -120,6 +112,7 @@ nmap <F7> :Ack -w <c-r><c-w><cr>
 "Conque
 let g:ConqueTerm_Color = 1
 nmap <silent> <Leader>z :ConqueTermSplit zsh<CR>
+nmap <silent> <Leader>Z :ConqueTermVSplit zsh<CR>
 
 "rspec
 let g:ruby_conque_rspec_command='rspec'
