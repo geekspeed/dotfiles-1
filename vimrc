@@ -18,6 +18,7 @@ Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-endwise.git'
 "Bundle 'wincent/Command-T'
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'taglist.vim'
 
 command! BI BundleInstall
 " Brief help
@@ -44,6 +45,7 @@ set nowrap
 set textwidth=0
 set wrapmargin=0
 set backspace=indent,eol,start
+
 "tabs and indents
 set autoindent
 set smartindent
@@ -79,7 +81,7 @@ set hlsearch
 
 "ctrlp file searching
 set wildignore=.git,.svn,*.o,*.obj,*.rbc,*.class,*.ico,*.png,*.jpeg,*.jpg,*.gif,*.ttf,*.pdf,*.ttf,*.EOT,*.ttf,*.svg,*.woff
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|tmp\$|reports\$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|tmp\$|reports\$|vendor\$'
 
 "status line
 set laststatus=2
@@ -87,8 +89,11 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ [%{strlen(&fenc)?&fenc:'n
 
 "keys
 
+"TagList
+map <C-w> :TlistToggle<cr>
+
 "NERDTree
-map <C-e> :NERDTree
+map <C-e> :NERDTreeToggle<cr>
 
 "change tabs
 map <C-h> :tabprev<cr>

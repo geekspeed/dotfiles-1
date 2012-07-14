@@ -1,14 +1,14 @@
 --color
 --sort-files
 --smart-case
+#follow sym links
+--follow
 
+--type-set=ruby=.rb,.haml,.rake,.erb
 --type-set=sass=.sass
---type-set=coffee=.coffee
---type-set=ruby=.haml,.rake
+--type-add=js=.coffee
 
 --ignore-dir=rafa/static
 --ignore-dir=compiled
 --ignore-dir=compressed
---ignore-dir=tmp
 --ignore-dir=reports
---ignore-dir=coverage
