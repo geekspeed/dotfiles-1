@@ -1,7 +1,9 @@
 [user]
   name = Mike Bain
-  email = mike@thealphatester.com
-
+  email =
+[github]
+  user = TheAlphaTester
+  token =
 [alias]
   st = status
   ci = commit
@@ -11,7 +13,6 @@
   patch = format-patch --stdout
   root = rev-parse --show-toplevel
   ctags = !.git/hooks/ctags
-
 [color]
   branch = auto
   diff = auto
@@ -19,21 +20,16 @@
   status = auto
   showbranch = auto
   sh = auto
-  [color "branch"]
+[color "branch"]
   current = green
   remote = cyan
-
-[push]
-  default = current
-
 [color "status"]
   added = green
   changed = red
   untracked = cyan
-
+[push]
+  default = current
 [merge]
   tool = opendiff
-
-[github]
-  user = TheAlphaTester
-  token =
+[core]
+	editor = mvim -f
