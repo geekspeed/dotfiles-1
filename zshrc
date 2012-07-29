@@ -38,6 +38,6 @@ source ~/dotfiles/functions
 source ~/dotfiles/aliases
 source ~/dotfiles/ruby_settings
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$PATH"
-export EDITOR='vim'
 eval "$(rbenv init -)"
+
+export EDITOR='mvim'

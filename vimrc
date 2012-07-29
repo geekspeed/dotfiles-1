@@ -18,7 +18,6 @@ Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'taglist.vim'
-Bundle 'rson/vim-conque'
 Bundle 'skwp/vim-spec-finder'
 Bundle 'taglist.vim'
 
@@ -82,7 +81,7 @@ set hlsearch
 
 "ctrlp file searching
 set wildignore=.git,.svn,*.o,*.obj,*.rbc,*.class,*.ico,*.png,*.jpeg,*.jpg,*.gif,*.ttf,*.pdf,*.ttf,*.EOT,*.ttf,*.svg,*.woff
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$|tmp\$|reports\$|vendor\$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|tmp$\|reports$\|vendor$\|coverage'
 
 "status line
 set laststatus=2
@@ -97,24 +96,15 @@ map <C-a> :TlistToggle<cr>
 map <C-e> :NERDTreeToggle<cr>
 
 " Bubble lines
-nnoremap <C-j> :m+<cr>==
-nnoremap <C-k> :m-2<cr>==
-inoremap <C-j> <Esc>:m+<cr>==gi
-inoremap <C-k> <Esc>:m-2<cr>==gi
-vnoremap <C-j> :m'>+<cr>gv=gv
-vnoremap <C-k> :m-2<cr>gv=gv
+nnoremap <C-m-j> :m+<cr>==
+nnoremap <C-m-k> :m-2<cr>==
+inoremap <C-m-j> <Esc>:m+<cr>==gi
+inoremap <C-m-k> <Esc>:m-2<cr>==gi
+vnoremap <C-m-j> :m'>+<cr>gv=gv
+vnoremap <C-m-k> :m-2<cr>gv=gv
 
 "Searching
 nmap <C-f> :FufFileWithFullCwd<cr>
 nmap <leader>a :Ack
 nmap <F7> :Ack -w <c-r><c-w><cr>
-
-"Conque
-let g:ConqueTerm_Color = 1
-nmap <silent> <Leader>z :ConqueTermSplit zsh<CR>
-nmap <silent> <Leader>Z :ConqueTermVSplit zsh<CR>
-
-"rspec
-let g:ruby_conque_rspec_command='rspec'
-nmap <silent> <Leader>s :call RelatedSpecVOpen()<CR>
 

@@ -30,6 +30,6 @@ alias rake='be rake'
 alias rspec='nocorrect be rspec --color'
 
 # ctags
-alias ctags='ctags -R --exclude .git --exclude reports --exclude tmp .'
+alias ctags='ctags -R --exclude=.git --exclude=reports --exclude=tmp --exclude=vendor --exclude=coverage .'
 
 #zsh spellings
