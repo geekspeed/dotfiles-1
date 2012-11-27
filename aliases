@@ -9,6 +9,7 @@ alias la='ls -A'
 
 # git
 alias ga='git add -p'
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gb='git branch'
 alias gc='git commit -v'
 alias gco='git checkout'
@@ -21,12 +22,13 @@ alias gs='git status -sb'
 
 # bundler
 alias b="bundle"
-alias bi="b install --path vendor"
+alias bi="b install"
 alias bu="b update"
 alias be="b exec"
 
 # ruby
 alias rake='be rake'
+alias rails='be rails'
 alias rspec='nocorrect be rspec --color'
 
 # ctags

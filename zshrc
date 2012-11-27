@@ -18,7 +18,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler gem git github heroku osx rails3 ruby rvm textmate )
+plugins=(brew bundler gem git heroku osx rails3 ruby textmate )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,4 +40,4 @@ source ~/dotfiles/ruby_settings
 
 eval "$(rbenv init -)"
 
-export EDITOR='mvim'
+export EDITOR='subl -w'

@@ -1,9 +1,8 @@
 [user]
   name = Mike Bain
-  email =
+  email = mike@thealphatester.com
 [github]
   user = TheAlphaTester
-  token =
 [alias]
   st = status
   ci = commit
@@ -32,4 +31,4 @@
 [merge]
   tool = opendiff
 [core]
-	editor = mvim -f
+	editor = subl -w
