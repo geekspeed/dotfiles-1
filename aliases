@@ -21,15 +21,14 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gs='git status -sb'
 
 # bundler
-alias b="bundle"
-alias bi="b install"
-alias bu="b update"
-alias be="b exec"
+alias be="bundle exec"
 
 # ruby
 alias rake='be rake'
+alias rspec='be rspec --color'
 alias rails='be rails'
-alias rspec='nocorrect be rspec --color'
+alias rc='rails c'
+alias fs='foreman start'
 
 # ctags
 alias ctags='ctags -R --exclude=.git --exclude=reports --exclude=tmp --exclude=vendor --exclude=coverage .'

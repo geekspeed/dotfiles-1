@@ -31,4 +31,4 @@
 [merge]
   tool = opendiff
 [core]
-	editor = subl -w
+  editor = subl -w
