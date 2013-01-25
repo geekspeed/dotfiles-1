@@ -26,7 +26,10 @@ alias be="bundle exec"
 alias rake='be rake'
 alias rspec='be rspec --color'
 alias rails='be rails'
+alias cap='be cap'
+alias vagrant='be vagrant'
 alias rc='rails c'
+alias rs='rails s'
 alias fs='foreman start'
 
 # ctags
