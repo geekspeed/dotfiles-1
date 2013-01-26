@@ -1,3 +1,4 @@
 *.swo
 *.swp
 vim/bundle/*
+ec2_keys

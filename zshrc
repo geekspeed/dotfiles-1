@@ -37,6 +37,7 @@ chpwd() {
 source ~/dotfiles/functions
 source ~/dotfiles/aliases
 source ~/dotfiles/ruby_settings
+source ~/.ssh/ec2_keys
 
 export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
