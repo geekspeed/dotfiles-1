@@ -1,6 +1,3 @@
-# cd
-alias ..='cd ..'
-
 # ls
 alias ls="ls -F"
 alias l="ls -lAh"
@@ -21,19 +18,18 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gs='git status -sb'
 
 # bundler
-alias be="bundle exec"
+alias b='bundle'
+alias be='bundle exec'
 
 # ruby
 alias rake='be rake'
 alias rspec='be rspec --color'
-alias rails='be rails'
+alias r='be rails'
 alias cap='be cap'
-alias vagrant='be vagrant'
-alias rc='rails c'
-alias rs='rails s'
+alias v='be vagrant'
+alias rc='r console'
+alias rs='r server'
 alias fs='foreman start'
 
 # ctags
 alias ctags='ctags -R --exclude=.git --exclude=reports --exclude=tmp --exclude=vendor --exclude=coverage .'
-
-#zsh spellings
