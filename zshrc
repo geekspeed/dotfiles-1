@@ -1,10 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="afowler"
 
 # Comment this out to disable weekly auto-update checks
@@ -39,6 +35,9 @@ source ~/dotfiles/aliases
 source ~/dotfiles/ruby_settings
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
 
 unsetopt correct_all
 
