@@ -22,9 +22,9 @@ alias b='bundle'
 alias be='bundle exec'
 
 # ruby
-alias rake='be rake'
+alias r='be rake'
 alias s='be rspec'
-alias r='be rails'
+alias rails='be rails'
 alias p='pry -r ./config/environment'
 alias cap='be cap'
 alias v='be vagrant'

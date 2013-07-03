@@ -44,3 +44,4 @@ unsetopt correct_all
 export EDITOR='subl -w'
 
 export PATH="$HOME/Library/Haskell/bin:/usr/local/heroku/bin:/usr/local/share/npm/bin:$PATH"
+alias conan=rake
