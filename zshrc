@@ -17,8 +17,6 @@ source ~/dotfiles/functions
 source ~/dotfiles/aliases
 source ~/dotfiles/ruby_settings
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 setopt APPEND_HISTORY
 HISTSIZE=5200
 SAVEHIST=5000
