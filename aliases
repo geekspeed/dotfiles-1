@@ -20,11 +20,12 @@ alias gs='git status -sb'
 # bundler
 alias b='bundle'
 alias be='bundle exec'
+alias top='htop'
+
 
 # ruby
-alias r='be rake'
 alias s='be rspec'
-alias rails='be rails'
+alias r='be rails'
 alias p='pry -r ./config/environment'
 alias cap='be cap'
 alias v='be vagrant'
