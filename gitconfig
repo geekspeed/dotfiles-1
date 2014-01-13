@@ -32,3 +32,4 @@
   tool = opendiff
 [core]
   editor = subl -w
+	excludesfile = ~/.gitignore

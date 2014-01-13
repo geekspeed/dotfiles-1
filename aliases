@@ -20,8 +20,6 @@ alias gs='git status -sb'
 # bundler
 alias b='bundle'
 alias be='bundle exec'
-alias top='htop'
-
 
 # ruby
 alias s='be rspec'

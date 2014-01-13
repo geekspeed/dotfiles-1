@@ -15,7 +15,7 @@ git-escape-magic
 
 source ~/dotfiles/functions
 source ~/dotfiles/aliases
-source ~/dotfiles/ruby_settings
+# source ~/dotfiles/ruby_settings
 
 setopt APPEND_HISTORY
 HISTSIZE=5200
