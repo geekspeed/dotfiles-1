@@ -1,0 +1,13 @@
+Host *
+  ControlMaster auto
+  ControlPath ~/.ssh/sockets/%r@%h-%p
+  ControlPersist 600
+
+Host aerrgarg.tactapp.com
+  User deploy
+  ForwardAgent yes
+  ProxyCommand none
+
+Host *.tactapp.com
+  User deploy
+  ProxyCommand ssh -e none aerrgarg.tactapp.com nc %h %p

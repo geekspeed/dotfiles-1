@@ -1,8 +1,8 @@
 [user]
   name = Mike Bain
-  email = mike@thealphatester.com
+  email = mike@aaa.com
 [github]
-  user = TheAlphaTester
+  user = MikeBain
 [alias]
   st = status
   ci = commit
