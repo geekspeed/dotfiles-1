@@ -29,4 +29,10 @@ unsetopt correct
 export EDITOR='subl -w'
 
 export PATH="$HOME/Library/Haskell/bin:/usr/local/heroku/bin:/usr/local/share/npm/bin:$PATH"
-alias conan=rake
+
+setjdk() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+    java -version
+  }
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`

@@ -32,4 +32,4 @@
   tool = opendiff
 [core]
   editor = subl -w
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/mike/.gitignore_global
