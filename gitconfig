@@ -8,10 +8,7 @@
   ci = commit
   co = checkout
   br = branch
-  sh = !git-sh
   patch = format-patch --stdout
-  root = rev-parse --show-toplevel
-  ctags = !.git/hooks/ctags
 [color]
   branch = auto
   diff = auto
@@ -27,9 +24,9 @@
   changed = red
   untracked = cyan
 [push]
-  default = current
+  default = simple
 [merge]
   tool = opendiff
 [core]
   editor = subl -w
-	excludesfile = /Users/mike/.gitignore_global
+	excludesfile = ~/.gitignore
