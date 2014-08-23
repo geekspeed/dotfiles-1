@@ -22,12 +22,11 @@ alias b='bundle'
 alias be='bundle exec'
 
 # ruby
-alias s='be rspec'
-alias r='be rails'
-alias p='pry -r ./config/environment'
-alias cap='be cap'
-alias rc='r console'
-alias rs='r server'
+alias s='bundle exec rspec'
+alias r='bundle exec rails'
+alias p='bundle exec pry -r ./config/environment'
+alias rc='bundle exec rails console'
+alias rs='bundle exec rails server'
 alias fs='foreman start'
 
 # ctags
