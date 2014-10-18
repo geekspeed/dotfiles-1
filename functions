@@ -2,3 +2,8 @@ function xtitle {  # change the title of your xterm* window
   unset PROMPT_COMMAND
   echo -ne "\033]0;$1\007"
 }
+
+setjdk() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+    java -version
+}
