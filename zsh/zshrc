@@ -34,5 +34,5 @@ unsetopt correct
 
 export EDITOR="subl -n -w"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
